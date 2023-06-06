@@ -13,7 +13,12 @@ class ChatApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'NotoSans',
+        brightness: Brightness.dark,
+        primaryColor: Colors.black,
+        hintColor: Colors.green,
       ),
+      debugShowMaterialGrid: false,
+      debugShowCheckedModeBanner: false,
       home: ChatScreen(),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
@@ -62,7 +67,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Future<String> fetchGpt3Response(String prompt) async {
     var headers = {
-      'Authorization': 'Bearer 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',
+      'Authorization': 'Bearer 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',
       'Content-Type': 'application/json',
     };
 
@@ -148,7 +153,6 @@ class _ChatScreenState extends State<ChatScreen> {
       ),
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
