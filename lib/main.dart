@@ -67,7 +67,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Future<String> fetchGpt3Response(String prompt) async {
     var headers = {
-      'Authorization': 'Bearer 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',
+      'Authorization': 'Bearer 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',
       'Content-Type': 'application/json',
     };
 
