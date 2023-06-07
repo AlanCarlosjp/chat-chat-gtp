@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:ajudaa_mb/config.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -67,7 +68,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Future<String> fetchGpt3Response(String prompt) async {
     var headers = {
-      'Authorization': 'Bearer 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',
+      'Authorization': 'Bearer ${Config.openaiApiKey}',
       'Content-Type': 'application/json',
     };
 
