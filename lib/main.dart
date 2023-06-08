@@ -20,7 +20,7 @@ class ChatApp extends StatelessWidget {
       ),
       debugShowMaterialGrid: false,
       debugShowCheckedModeBanner: false,
-      home: ChatScreen(),
+      home: HomeScreen(),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -29,6 +29,46 @@ class ChatApp extends StatelessWidget {
       supportedLocales: [
         const Locale('pt', 'BR'), // Português brasileiro
       ],
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Ajudaa")),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("Ajudaaa !!!", style: TextStyle(fontSize: 60),),
+            SizedBox(height: 100,width: 200),
+            Text(
+              "Aprendendo tudo com IA. \n As letras são mudadas para que\n suas "
+                  "pesquisas não sejam encontradas pelos seus professores.",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20.0),
+            ),
+            SizedBox(height: 20.0),
+            Container(
+              height: 50.0,
+              width: 200.0,
+              child: ElevatedButton(
+                child: Text('Ir para o Chat'),
+                style: const ButtonStyle(
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ChatScreen()),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
