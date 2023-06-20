@@ -1,4 +1,4 @@
-package com.example.ajudaa_mb
+package com.chat.ajudaa_mb
 
 import io.flutter.embedding.android.FlutterActivity
 
